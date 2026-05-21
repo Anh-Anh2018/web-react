@@ -1,6 +1,5 @@
 
 import {
-  SafeAreaView,
   ScrollView,
   View,
   useWindowDimensions,
@@ -15,30 +14,45 @@ export default function Home() {
   const isMobile = width < 768;
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "#f5f5f5",
+      }}
+    >
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
-          padding: isMobile ? 12 : 20,
+          width: "100%",
+          alignItems: "center",
+          paddingVertical: isMobile ? 12 : 24,
+          paddingHorizontal: isMobile ? 12 : 20,
         }}
       >
         <View
           style={{
             width: "100%",
             maxWidth: 1280,
-            alignSelf: "center",
+
             backgroundColor: "#FFFFFF",
+
             borderRadius: 24,
+
             padding: isMobile ? 16 : 24,
           }}
         >
           <ProductGallery />
 
-          <View style={{ height: isMobile ? 40 : 56 }} />
+          <View
+            style={{
+              height: isMobile ? 40 : 56,
+            }}
+          />
 
           <ProductInfo />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
+
