@@ -9,11 +9,17 @@ export default function ProductGallery() {
   return (
     <View
       style={{
-        flexDirection: isMobile ? "column" : "row",
+        flexDirection: "row",
         gap: 24,
+
         width: "100%",
         maxWidth: 1280,
+
         alignSelf: "center",
+
+        justifyContent: "center",
+
+        flexWrap: isMobile ? "wrap" : "nowrap",
       }}
     >
       {/* LEFT */}
@@ -22,9 +28,7 @@ export default function ProductGallery() {
           uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
         }}
         style={{
-          width: isMobile ? "100%" : 300,
-          minWidth: isMobile ? "100%" : 300,
-
+          width: isMobile ? width * 0.9 : 320,
           height: isMobile ? 300 : 420,
 
           borderRadius: 16,
@@ -35,11 +39,9 @@ export default function ProductGallery() {
       {/* CENTER */}
       <View
         style={{
-          justifyContent: "space-between",
           gap: 24,
 
-          width: isMobile ? "100%" : 220,
-          minWidth: isMobile ? "100%" : 220,
+          width: isMobile ? width * 0.9 : 220,
         }}
       >
         <Image
@@ -75,9 +77,7 @@ export default function ProductGallery() {
           uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
         }}
         style={{
-          width: isMobile ? "100%" : 300,
-          minWidth: isMobile ? "100%" : 300,
-
+          width: isMobile ? width * 0.9 : 320,
           height: isMobile ? 300 : 420,
 
           borderRadius: 16,
