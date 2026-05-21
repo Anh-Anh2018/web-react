@@ -1,4 +1,5 @@
 
+
 import { Image, View, useWindowDimensions } from "react-native";
 
 export default function ProductGallery() {
@@ -24,9 +25,7 @@ export default function ProductGallery() {
     >
       {/* LEFT */}
       <Image
-        source={{
-          uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
-        }}
+        source={require("../assets/images/left.jpg")}
         style={{
           width: isMobile ? width * 0.9 : 320,
           height: isMobile ? 300 : 420,
@@ -45,9 +44,7 @@ export default function ProductGallery() {
         }}
       >
         <Image
-          source={{
-            uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
-          }}
+         source={require("../assets/images/center1.jpg")}
           style={{
             width: "100%",
             height: isMobile ? 220 : 198,
@@ -58,9 +55,7 @@ export default function ProductGallery() {
         />
 
         <Image
-          source={{
-            uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg",
-          }}
+         source={require("../assets/images/center2.jpg")}
           style={{
             width: "100%",
             height: isMobile ? 220 : 198,
@@ -73,9 +68,7 @@ export default function ProductGallery() {
 
       {/* RIGHT */}
       <Image
-        source={{
-          uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
-        }}
+       source={require("../assets/images/right.jpg")}
         style={{
           width: isMobile ? width * 0.9 : 320,
           height: isMobile ? 300 : 420,
