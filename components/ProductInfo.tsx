@@ -18,11 +18,17 @@ export default function ProductInfo() {
         gap: isMobile ? 40 : 64,
         marginTop: 60,
         width: "100%",
-        paddingHorizontal: 16,
+        maxWidth: 1280,
+        alignSelf: "center",
       }}
     >
       {/* LEFT */}
-      <View style={{ flex: 1 }}>
+      <View
+        style={{
+          flex: 1,
+          minWidth: 0,
+        }}
+      >
         {/* title */}
         <Text
           style={{
@@ -42,7 +48,7 @@ export default function ProductInfo() {
             lineHeight: 28,
             fontSize: 16,
             marginBottom: 40,
-            maxWidth: 650,
+            maxWidth: isMobile ? "100%" : 650,
           }}
         >
           The Basic Tee 6-Pack allows you to fully express your vibrant
@@ -97,7 +103,7 @@ export default function ProductInfo() {
             color: "#4B5563",
             lineHeight: 28,
             fontSize: 16,
-            maxWidth: 650,
+            maxWidth: isMobile ? "100%" : 650,
           }}
         >
           The 6-Pack includes two black, two white, and two heather gray
@@ -110,9 +116,13 @@ export default function ProductInfo() {
       <View
         style={{
           width: isMobile ? "100%" : 340,
+          minWidth: isMobile ? "100%" : 340,
+
           borderLeftWidth: isMobile ? 0 : 1,
           borderTopWidth: isMobile ? 1 : 0,
+
           borderColor: "#E5E7EB",
+
           paddingLeft: isMobile ? 0 : 40,
           paddingTop: isMobile ? 32 : 0,
         }}
@@ -219,16 +229,20 @@ export default function ProductInfo() {
                   width: isMobile ? "22%" : 68,
                   minWidth: 68,
                   height: 52,
+
                   borderRadius: 10,
                   borderWidth: 1,
+
                   borderColor:
                     size === "S"
                       ? "#4F46E5"
                       : "#D1D5DB",
+
                   backgroundColor:
                     size === "S"
                       ? "#4F46E5"
                       : "#FFFFFF",
+
                   alignItems: "center",
                   justifyContent: "center",
                 }}

@@ -12,9 +12,8 @@ export default function ProductGallery() {
         flexDirection: isMobile ? "column" : "row",
         gap: 24,
         width: "100%",
-        maxWidth: 1400,
+        maxWidth: 1280,
         alignSelf: "center",
-        paddingHorizontal: 16,
       }}
     >
       {/* LEFT */}
@@ -24,7 +23,10 @@ export default function ProductGallery() {
         }}
         style={{
           width: isMobile ? "100%" : 300,
+          minWidth: isMobile ? "100%" : 300,
+
           height: isMobile ? 300 : 420,
+
           borderRadius: 16,
         }}
         resizeMode="cover"
@@ -35,6 +37,9 @@ export default function ProductGallery() {
         style={{
           justifyContent: "space-between",
           gap: 24,
+
+          width: isMobile ? "100%" : 220,
+          minWidth: isMobile ? "100%" : 220,
         }}
       >
         <Image
@@ -42,8 +47,9 @@ export default function ProductGallery() {
             uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
           }}
           style={{
-            width: isMobile ? "100%" : 220,
+            width: "100%",
             height: isMobile ? 220 : 198,
+
             borderRadius: 16,
           }}
           resizeMode="cover"
@@ -54,8 +60,9 @@ export default function ProductGallery() {
             uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg",
           }}
           style={{
-            width: isMobile ? "100%" : 220,
+            width: "100%",
             height: isMobile ? 220 : 198,
+
             borderRadius: 16,
           }}
           resizeMode="cover"
@@ -69,7 +76,10 @@ export default function ProductGallery() {
         }}
         style={{
           width: isMobile ? "100%" : 300,
+          minWidth: isMobile ? "100%" : 300,
+
           height: isMobile ? 300 : 420,
+
           borderRadius: 16,
         }}
         resizeMode="cover"
@@ -77,4 +87,3 @@ export default function ProductGallery() {
     </View>
   );
 }
-
