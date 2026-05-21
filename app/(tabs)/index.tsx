@@ -1,57 +1,80 @@
 
-import {
-  ScrollView,
-  View,
-  useWindowDimensions,
-} from "react-native";
+import { Image, View } from "react-native";
 
-import ProductGallery from "../../components/ProductGallery";
-import ProductInfo from "../../components/ProductInfo";
-
-export default function Home() {
-  const { width } = useWindowDimensions();
-
-  const isMobile = width < 768;
-
+export default function ProductGallery() {
   return (
     <View
       style={{
-        flex: 1,
-        backgroundColor: "#f5f5f5",
+        flexDirection: "row",
+        gap: 24,
+
+        width: "100%",
+        maxWidth: 1280,
+
+        alignSelf: "center",
+        justifyContent: "center",
       }}
     >
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{
-          width: "100%",
-          alignItems: "center",
-          paddingVertical: isMobile ? 12 : 24,
-          paddingHorizontal: isMobile ? 12 : 20,
+      {/* LEFT BIG */}
+      <Image
+        source={{
+          uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
+        }}
+        style={{
+          width: 320,
+          height: 420,
+
+          borderRadius: 16,
+        }}
+        resizeMode="cover"
+      />
+
+      {/* CENTER SMALL */}
+      <View
+        style={{
+          gap: 24,
         }}
       >
-        <View
-          style={{
-            width: "100%",
-            maxWidth: 1280,
-
-            backgroundColor: "#FFFFFF",
-
-            borderRadius: 24,
-
-            padding: isMobile ? 16 : 24,
+        <Image
+          source={{
+            uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
           }}
-        >
-          <ProductGallery />
+          style={{
+            width: 220,
+            height: 198,
 
-          <View
-            style={{
-              height: isMobile ? 40 : 56,
-            }}
-          />
+            borderRadius: 16,
+          }}
+          resizeMode="cover"
+        />
 
-          <ProductInfo />
-        </View>
-      </ScrollView>
+        <Image
+          source={{
+            uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg",
+          }}
+          style={{
+            width: 220,
+            height: 198,
+
+            borderRadius: 16,
+          }}
+          resizeMode="cover"
+        />
+      </View>
+
+      {/* RIGHT BIG */}
+      <Image
+        source={{
+          uri: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
+        }}
+        style={{
+          width: 320,
+          height: 420,
+
+          borderRadius: 16,
+        }}
+        resizeMode="cover"
+      />
     </View>
   );
 }
